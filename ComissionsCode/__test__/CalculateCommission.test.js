@@ -5,7 +5,7 @@ describe('calculateCommissionFunction: Commission Calculation Tests', () =>
   test('Rule 1: Lock Qty = 1, Stock Qty = 1, Barrel Qty = 1', () => {
     const [totalSales, commission] = calculateCommissionFunction(1, 1, 1);
     expect(totalSales).toBe(100);
-    expect(commission).toBeCloseTo(10);
+    expect(commission).toBe(10);
   });
 
   test('Rule 2: Lock Qty = 1, Stock Qty = 1, Barrel Qty = 91', () => {

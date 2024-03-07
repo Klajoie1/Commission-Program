@@ -20,13 +20,19 @@ jobs:
         node-version: '20.11.1'
 
     - name: Install Dependencies
-      run: npm install
+      run: |
+        cd ComissionsCode
+        npm install
 
     - name: Run Tests
-      run: npm test
+      run: |
+        cd ComissionsCode
+        npm test
 
     - name: Run Tests with Coverage
-      run: npm run test -- --coverage
+      run: |
+        cd ComissionsCode
+        npm run test -- --coverage
 
     - name: Upload Coverage to GitHub
       uses: actions/upload-artifact@v2
